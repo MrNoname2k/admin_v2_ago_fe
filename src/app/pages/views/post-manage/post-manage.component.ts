@@ -1,0 +1,10 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-post-manage',
+  templateUrl: './post-manage.component.html',
+  styleUrls: ['./post-manage.component.scss']
+})
+export class PostManageComponent {
+
+}

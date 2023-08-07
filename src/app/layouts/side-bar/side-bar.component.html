@@ -1,0 +1,23 @@
+<div class="left_sidebar">
+  <nav class="sidebar">
+      <div class="user-info">
+          <div class="image"><a href="javascript:void(0);"><img src="../assets/images/user.png" alt="User"></a></div>
+          <div class="detail mt-3">
+              <h5 class="mb-0">{{admin?.firstName + ' ' + admin?.lastName}}</h5>
+              <small>Admin</small>
+          </div>
+          <div class="social">
+              <a href="{{admin?.linkFacebook}}"  title="facebook"><i class="ti-facebook"></i></a>
+              <a href="{{admin?.linkIg}}" title="twitter"><i class="ti-instagram"></i></a>
+          </div>
+      </div>
+      <ul id="main-menu" class="metismenu">
+          <li class="g_heading">Menu</li>
+          <li class="active"><a href="index.html"><i class="ti-home"></i><span>Dashboard</span></a></li>
+          <li class="g_heading">Managerment</li>
+          <li><a [routerLink]="['/users']" routerLinkActive="router-link-active" ><i class="ti-vector"></i><span>User Managent</span></a></li>
+          <li class="g_heading">Others</li>
+          <li><a href="app-calendar.html"><i class="ti-calendar"></i><span>Logout</span></a></li>
+      </ul>
+  </nav>
+</div>

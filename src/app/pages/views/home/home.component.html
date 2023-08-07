@@ -1,0 +1,290 @@
+<div class="page">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="javascript:void(0);">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-align-justify"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0);" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Application</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="javascript:void(0);">Inbox</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0);">Calendar</a>
+            <a class="dropdown-item" href="javascript:void(0);">TaskBoard</a>
+            <a class="dropdown-item" href="javascript:void(0);">Chat App</a>
+            <a class="dropdown-item" href="javascript:void(0);">Contacts</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0);" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Users</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="javascript:void(0);">Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0);">Timeline</a>
+            <a class="dropdown-item" href="javascript:void(0);">Invoices</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0);" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Pages</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="javascript:void(0);">Stater page</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0);">Pricing</a>
+            <a class="dropdown-item" href="javascript:void(0);">Search</a>
+            <a class="dropdown-item" href="javascript:void(0);">Testimonials</a>
+            <a class="dropdown-item" href="javascript:void(0);">Map</a>
+            <a class="dropdown-item" href="javascript:void(0);">Icon</a>
+            <a class="dropdown-item" href="javascript:void(0);">Carousel</a>
+            <a class="dropdown-item" href="javascript:void(0);">Gallery</a>
+            <a class="dropdown-item" href="javascript:void(0);">Lookup</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button type="button" class="btn btn-primary">Add</button>
+        <a href="https://themeforest.net/user/wrraptheme/portfolio" title="Portfolio"
+          class="btn btn-success ml-2">Portfolio</a>
+      </form>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row clearfix">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card widget_2 big_icon traffic">
+          <div class="body">
+            <h3>Posts Today</h3>
+            <h2>{{reportPost?.postToday}} <small class="info">of {{reportPost?.postTotal}} Total</small></h2>
+            <small>This Month : {{reportPost?.postThisMonth}} - Last Month : {{reportPost?.postLastMonth}}</small>
+            <div class="progress mb-0">
+              <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                aria-valuemax="197" [style.width]="postBar+'%'"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card widget_2 big_icon sales">
+          <div class="body">
+            <h3>Users Registor Today</h3>
+            <h2>{{reportUserRegister?.userToday}} <small class="info">of {{reportUserRegister?.userTotal}} Total</small></h2>
+            <small>This Month : {{reportUserRegister?.userThisMonth}} - Last Month : {{reportUserRegister?.userLastMonth}}</small>
+            <div class="progress mb-0">
+              <div class="progress-bar bg-yellow" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                aria-valuemax="197" [style.width]="regBar+'%'"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card widget_2 big_icon email">
+          <div class="body">
+            <h3>Reactions Today</h3>
+            <h2>{{reportReaction?.reactionToday}} <small class="info">of {{reportReaction?.reactionTotal}} Total</small></h2>
+            <small>This Month : {{reportReaction?.reactionThisMonth}} - Last Month : {{reportReaction?.reactionLastMonth}}</small>
+            <div class="progress mb-0">
+              <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                aria-valuemax="197" [style.width]="reactBar+'%'"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card widget_2 big_icon domains">
+          <div class="body">
+            <h3>Files Today</h3>
+            <h2>{{reportFile?.fileToday}} <small class="info">of {{reportFile?.fileTotal}} Total</small></h2>
+            <small>This Month : {{reportFile?.fileThisMonth}} - Last Month : {{reportFile?.fileLastMonth}}</small>
+            <div class="progress mb-0">
+              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                aria-valuemax="197" [style.width]="fileBar+'%'"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xl-4 col-lg-12 col-md-12">
+        <div class="card">
+          <div class="header">
+            <h2>User register By Month Statistics</h2>
+          </div>
+          <div class="body">
+            <div class="d-flex bd-highlight mb-4">
+              <div class="flex-fill bd-highlight">
+                <h5 class="mb-0">21,521 <i class="fa fa-angle-up"></i></h5>
+                <small>Today</small>
+              </div>
+              <div class="flex-fill bd-highlight">
+                <h5 class="mb-0">%12.35 <i class="fa fa-angle-down"></i></h5>
+                <small>Last month %</small>
+              </div>
+            </div>
+            <div class="c3_chart">
+              <apx-chart [series]="chartOptions!.series!" [chart]="chartOptions.chart!" [xaxis]="chartOptions.xaxis!"
+                [title]="chartOptions.title!"></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-8 col-lg-12 col-md-12">
+        <div class="card">
+          <div class="header">
+            <h2>User Login Statistics Today</h2>
+          </div>
+          <div class="body">
+            <div class="d-flex bd-highlight mb-4">
+              <div class="flex-fill bd-highlight">
+                <h5 class="mb-0">2,521 <i class="fa fa-angle-up"></i></h5>
+                <small>Today</small>
+              </div>
+              <div class="flex-fill bd-highlight">
+                <h5 class="mb-0">18.35 <i class="fa fa-angle-down"></i></h5>
+                <small>Last month %</small>
+              </div>
+            </div>
+            <div class="c3_chart">
+              <apx-chart [series]="chartLineOptions.series!" [chart]="chartLineOptions.chart!"
+                [xaxis]="chartLineOptions.xaxis!" [stroke]="chartLineOptions.stroke!"
+                [tooltip]="chartLineOptions.tooltip!" [dataLabels]="chartLineOptions.dataLabels!"></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-md-12 col-lg-8">
+        <div class="card">
+          <div class="header">
+            <h2>Visitors Statistics</h2>
+          </div>
+          <div class="body">
+            <div id="" class="jvector-map" style="height: 405px;">
+              <apx-chart
+    [series]="visitorsChart.series!"
+    [chart]="visitorsChart.chart!"
+    [plotOptions]="visitorsChart.plotOptions!"
+    [labels]="visitorsChart.labels!"
+    [legend]="visitorsChart.legend!"
+    [colors]="visitorsChart.colors!"
+    [responsive]="visitorsChart.responsive"
+  ></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="card">
+          <div class="header">
+            <h2>Distribution</h2>
+          </div>
+          <div class="body text-center">
+            <div class="c3_chart">
+              <apx-chart [series]="chartOptionsMessage!.series!" [chart]="chartOptionsMessage.chart!" [xaxis]="chartOptionsMessage.xaxis!"
+                [title]="chartOptionsMessage.title!"></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Social Media</h2>
+          </div>
+          <div class="body">
+            <div class="table-responsive">
+              <table class="table table-hover c_table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Like</th>
+                    <th>Comments</th>
+                    <th>Share</th>
+                    <th>Members</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fa fa-linkedin"></i>
+                    </td>
+                    <td>
+                      <span class="">Linked In</span>
+                      <span class="text-muted">Florida, United States</span>
+                    </td>
+                    <td>19K</td>
+                    <td>14K</td>
+                    <td>10K</td>
+                    <td>
+                      <span class="badge badge-success">2341</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-twitter"></i>
+                    </td>
+                    <td><span class="list-name">Twitter</span>
+                      <span class="text-muted">Arkansas, United States</span>
+                    </td>
+                    <td>7K</td>
+                    <td>11K</td>
+                    <td>21K</td>
+                    <td>
+                      <span class="badge badge-success">952</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-facebook"></i>
+                    </td>
+                    <td><span class="list-name">Facebook</span>
+                      <span class="text-muted">Illunois, United States</span>
+                    </td>
+                    <td>15K</td>
+                    <td>18K</td>
+                    <td>8K</td>
+                    <td>
+                      <span class="badge badge-success">6127</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-google-plus"></i>
+                    </td>
+                    <td><span class="list-name">Google Plus</span>
+                      <span class="text-muted">Arizona, United States</span>
+                    </td>
+                    <td>15K</td>
+                    <td>18K</td>
+                    <td>154</td>
+                    <td>
+                      <span class="badge badge-success">325</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-youtube-play"></i>
+                    </td>
+                    <td><span class="list-name">YouTube</span>
+                      <span class="text-muted">Alaska, United States</span>
+                    </td>
+                    <td>15K</td>
+                    <td>18K</td>
+                    <td>200</td>
+                    <td>
+                      <span class="badge badge-success">160</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

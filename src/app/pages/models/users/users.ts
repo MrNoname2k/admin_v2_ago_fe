@@ -1,0 +1,21 @@
+export interface Users {
+  delFlg: string,
+  createDate: string,
+  updateDate: string,
+  id: string,
+  firstName: string,
+  lastName: string,
+  phone: string,
+  mail: string,
+  address: string,
+  city: string,
+  birthDay: string,
+  gender: string,
+  linkIg: string,
+  linkFacebook: string,
+  lastLoginDate: string,
+  online: string,
+  posts: string,
+  status: string,
+  description: string
+}

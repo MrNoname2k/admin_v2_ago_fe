@@ -1,0 +1,142 @@
+<div class="card widget-item">
+  <h4 class="widget-title">{{boardConfig.heading}}</h4>
+  <div class="widget-body">
+    
+    <!-- Adv Board -->
+    <ng-container *ngIf="boardConfig.boardType === 'advertisement'">
+      <div class="add-thumb">
+        <a href="#">
+          <img [src]="itemData.advInfo?.image" alt="advertisement">
+        </a>
+      </div>
+    </ng-container>
+
+    <!-- Info Board -->
+    <ng-container *ngIf="boardConfig.boardType === 'info'">
+      <div class="about-author">
+        <p>{{itemData.info?.desc}}</p>
+        <ul class="author-into-list">
+          <li><a href="#"><i class="bi bi-office-bag"></i>{{itemData.info?.job}}</a></li>
+          <li><a href="#"><i class="bi bi-home"></i>{{itemData.info?.addr}}</a></li>
+          <li><a href="#"><i class="bi bi-location-pointer"></i>{{itemData.info?.location}}</a></li>
+          <li><a href="#"><i class="bi bi-heart-beat"></i>{{itemData.info?.hobbies}}</a></li>
+        </ul>
+      </div>
+    </ng-container>
+
+    <!-- Memory Board -->
+    <ng-container *ngIf="boardConfig.boardType === 'memory'">
+      <div class="sweet-galley img-gallery">
+        <div class="row row-5">
+          <div class="col-4" *ngFor="let item of itemData.images">
+            <div class="gallery-tem">
+              <figure class="post-thumb">
+                <a class="gallery-selector" href="assets/images/gallery/gallery-1.jpg">
+                  <img [src]="item" alt="sweet memory">
+                </a>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Notifi Board -->
+    <ng-container *ngIf="boardConfig.boardType === 'notifi'">
+      <ul class="like-page-list-wrapper">
+        <li class="unorder-list" *ngFor="let item of itemData.notifiInfo">
+          <!-- profile picture end -->
+          <div class="profile-thumb">
+            <a href="#">
+              <figure class="profile-thumb-small">
+                <img [src]="item?.image" alt="profile picture">
+              </figure>
+            </a>
+          </div>
+          <!-- profile picture end -->
+
+          <div class="unorder-list-info">
+            <h3 class="list-title">{{item.name + ' ' + item.active}}<a href="#"></a></h3>
+            <p class="list-subtitle"><a href="#">{{item.time}}</a></p>
+          </div>
+        </li>
+      </ul>
+    </ng-container>
+
+    <!-- New Board  -->
+    <ng-container *ngIf="boardConfig.boardType === 'new'">
+      <ul class="like-page-list-wrapper">
+        <li class="unorder-list" *ngFor="let item of itemData.newInfo">
+          <!-- profile picture end -->
+          <div class="profile-thumb">
+            <a href="#">
+              <figure class="profile-thumb-small">
+                <img [src]="item?.image" alt="profile picture">
+              </figure>
+            </a>
+          </div>
+          <!-- profile picture end -->
+
+          <div class="unorder-list-info">
+            <h3 class="list-title">{{item.title}}<a href="#"></a></h3>
+            <p class="list-subtitle"><a href="#">{{item.time}}</a></p>
+          </div>
+        </li>
+      </ul>
+    </ng-container>
+
+    <!-- Friend Board -->
+    <ng-container *ngIf="boardConfig.boardType === 'friend'">
+      <ul class="like-page-list-wrapper">
+        <li class="unorder-list" *ngFor="let item of itemData.friends">
+          <!-- profile picture end -->
+          <div class="profile-thumb">
+            <a href="#">
+              <figure class="profile-thumb-small">
+                <img [src]="item.image" alt="profile picture">
+              </figure>
+            </a>
+          </div>
+          <!-- profile picture end -->
+
+          <div class="unorder-list-info">
+            <h3 class="list-title">{{item.name}}<a href="#"></a></h3>
+            <p class="list-subtitle">{{item.desc}}<a href="#"></a></p>
+          </div>
+
+          <button class="like-button active">
+            <img class="heart" src="assets/images/icons/heart.png" alt="">
+            <img class="heart-color" src="assets/images/icons/heart-color.png" alt="">
+          </button>
+
+        </li>
+      </ul>
+    </ng-container>
+
+    <!-- Page Board -->
+    <ng-container *ngIf="boardConfig.boardType === 'page'">
+      <ul class="like-page-list-wrapper">
+        <li class="unorder-list" *ngFor="let item of itemData.pageInfo">
+
+          <div class="profile-thumb">
+            <a href="#">
+              <figure class="profile-thumb-small">
+                <img [src]="item.image" alt="profile picture">
+              </figure>
+            </a>
+          </div>
+
+          <div class="unorder-list-info">
+            <h3 class="list-title">{{item.name}}<a href="#"></a></h3>
+            <p class="list-subtitle">{{item.pageType}}<a href="#"></a></p>
+          </div>
+
+          <button class="like-button active">
+            <img class="heart" src="assets/images/icons/heart.png" alt="">
+            <img class="heart-color" src="assets/images/icons/heart-color.png" alt="">
+          </button>
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+</div>
