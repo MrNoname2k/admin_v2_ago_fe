@@ -15,6 +15,12 @@ export const ApiPathConfig = {
   page: {
     dashboard: "v1/api/ago/admin/",
     userManger: "v1/api/ago/admin/user-manager"
+  },
+
+  userManagerHttp:{
+    getUser: "v1/api/ago/admin/info",
+    update:"v1/api/ago/admin/update-user",
+    softDelete: "v1/api/ago/admin/soft-delete"
   }
 
 

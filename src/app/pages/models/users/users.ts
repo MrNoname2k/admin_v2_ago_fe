@@ -1,5 +1,5 @@
 export interface Users {
-  delFlg: string,
+  delFlg: number,
   createDate: string,
   updateDate: string,
   id: string,

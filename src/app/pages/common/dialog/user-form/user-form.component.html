@@ -1,0 +1,52 @@
+<div class="" style="width: 100%;">
+  <h1 mat-dialog-title>User Name :  {{data.userUpdate.firstName}} {{data.userUpdate.lastName}} (Created At : {{data.userUpdate.createDate}})</h1>
+<div mat-dialog-content style="width: 100%;">
+  <p>Update User</p>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Phone</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.phone">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Mail</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.mail">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Address</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.address">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <mat-label>City</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.city">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Birth Day</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.birthDay">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Gender</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.gender">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Link Instagram</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.linkIg">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Link Facebook</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.linkFacebook">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="data.userUpdate.description">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.userUpdate" cdkFocusInitial>Ok</button>
+</div>
+
+
+<!-- Copyright 2023 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
+
+</div>
