@@ -32,5 +32,13 @@ export class UserManagerService extends HttpService{
     return this.put(`${ApiPath.SOFTDELETE}`,data).pipe(map((response: HttpClientResponse) => response)) as Observable<HttpClientResponse>;
   }
 
+  public recoverUser(data : Users): Observable<HttpClientResponse> {
+    return this.put(`${ApiPath.RECOVERUSER}`,data).pipe(map((response: HttpClientResponse) => response)) as Observable<HttpClientResponse>;
+  }
+
+  public getUsersDeleted(): Observable<HttpClientResponse> {
+    return this.get(`${ApiPath.GETUSERSDELETED}`).pipe(map((response: HttpClientResponse) => response)) as Observable<HttpClientResponse>;
+  }
+
 
 }

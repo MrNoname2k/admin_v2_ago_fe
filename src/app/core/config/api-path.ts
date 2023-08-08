@@ -14,5 +14,8 @@ export class ApiPath {
   public static GETUSERINFO = environment.apiUrl.concat(ApiPathConfig.userManagerHttp.getUser);
   public static UPDATEUSER = environment.apiUrl.concat(ApiPathConfig.userManagerHttp.update);
   public static SOFTDELETE = environment.apiUrl.concat(ApiPathConfig.userManagerHttp.softDelete);
+  public static GETUSERSDELETED = environment.apiUrl.concat(ApiPathConfig.userManagerHttp.getUserDeleted);
+  public static RECOVERUSER = environment.apiUrl.concat(ApiPathConfig.userManagerHttp.recoverUser);
+
 
 }

@@ -20,7 +20,9 @@ export const ApiPathConfig = {
   userManagerHttp:{
     getUser: "v1/api/ago/admin/info",
     update:"v1/api/ago/admin/update-user",
-    softDelete: "v1/api/ago/admin/soft-delete"
+    softDelete: "v1/api/ago/admin/soft-delete",
+    getUserDeleted: "v1/api/ago/admin/user-deleted",
+    recoverUser:"v1/api/ago/admin/recover-user"
   }
 
 

@@ -28,7 +28,6 @@ import { CardInfoComponent } from './components/card-info/card-info.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { ShareDialogComponent } from './components/share-dialog/share-dialog.component';
 import { ViewerDialogComponent } from './components/viewer-dialog/viewer-dialog.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CommentDialogComponent } from './components/comment-dialog/comment-dialog.component';
 
 const globalRippleConfig: RippleGlobalOptions = {
@@ -74,27 +73,14 @@ const CustomPipes = [
 
 @NgModule({
   declarations: [
-    ...CustomPipes,
-    ...CommontComponents,
-    BoardComponent,
-    SearchBarComponent,
-    ShareDialogComponent,
-    CommentDialogComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     AngularMaterialModule,
-    FormsModule,
-    SlickCarouselModule,
+    FormsModule
   ],
   exports: [
-    ...CustomPipes,
-    ...CommontComponents,
-    ReactiveFormsModule,
-    FormsModule,
-    AngularMaterialModule,
-    ToastComponent,
   ],
 })
 export class CommonAppModule {
