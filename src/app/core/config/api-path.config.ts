@@ -23,6 +23,14 @@ export const ApiPathConfig = {
     softDelete: "v1/api/ago/admin/soft-delete",
     getUserDeleted: "v1/api/ago/admin/user-deleted",
     recoverUser:"v1/api/ago/admin/recover-user"
+  },
+  postManagerHttp:{
+    getLegalPost: "v1/api/ago/admin/post/post-legal",
+    getIllegalPost: "v1/api/ago/admin/post/post-illegal",
+    getPost: "v1/api/ago/admin/post/info",
+    softDelete: "v1/api/ago/admin/post/soft-delete",
+    getPostDeleted: "v1/api/ago/admin/post/post-deleted",
+    recoverPost:"v1/api/ago/admin/post/recover-post"
   }
 
 
